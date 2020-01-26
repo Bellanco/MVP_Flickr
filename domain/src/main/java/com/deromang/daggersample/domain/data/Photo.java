@@ -51,6 +51,10 @@ public final class Photo implements Serializable {
     @Expose
     private Integer isfamily;
 
+    @SerializedName("description")
+    @Expose
+    private Description description;
+
     public Photo() {
     }
 
@@ -148,5 +152,13 @@ public final class Photo implements Serializable {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public Description getDescription() {
+        return description;
+    }
+
+    public void setDescription(Description description) {
+        this.description = description;
     }
 }
