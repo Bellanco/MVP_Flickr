@@ -1,11 +1,7 @@
 package com.deromang.daggersample.ui.detail;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +17,6 @@ import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
@@ -94,7 +89,8 @@ public class DetailFragment extends BaseFragment implements DetailView {
         tvTitle.setText(photo.getTitle());
         tvAuthor.setText(photo.getOwnername());
         tvDate.setText(photo.getDate());
-        tvDescription.setText(photo.getTitle());
+        if (photo.getDescription() != null)
+            tvDescription.setText(photo.getDescription().getContent());
     }
 
 
