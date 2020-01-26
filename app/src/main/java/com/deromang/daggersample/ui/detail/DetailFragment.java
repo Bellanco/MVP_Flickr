@@ -1,11 +1,11 @@
 package com.deromang.daggersample.ui.detail;
 
 
-import android.content.Intent;
-import android.net.Uri;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.SpannableString;
-import android.text.style.UnderlineSpan;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +21,9 @@ import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,8 +42,11 @@ public class DetailFragment extends BaseFragment implements DetailView {
     @BindView(R.id.tvDescription)
     TextView tvDescription;
 
-    @BindView(R.id.tvUrl)
-    TextView tvUrl;
+    @BindView(R.id.tvAuthor)
+    TextView tvAuthor;
+    @BindView(R.id.tvDate)
+    TextView tvDate;
+    Unbinder unbinder;
 
     private Photo photo;
 
@@ -87,6 +92,8 @@ public class DetailFragment extends BaseFragment implements DetailView {
     private void setupView() {
         Picasso.get().load(photo.getThumbnail()).into(ivTitle);
         tvTitle.setText(photo.getTitle());
+        tvAuthor.setText(photo.getOwnername());
+        tvDate.setText(photo.getDate());
         tvDescription.setText(photo.getTitle());
     }
 

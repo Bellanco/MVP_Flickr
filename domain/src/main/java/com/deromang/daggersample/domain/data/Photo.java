@@ -44,6 +44,9 @@ public final class Photo implements Serializable {
     @SerializedName("ownername")
     @Expose
     private String ownername;
+    @SerializedName("datetaken")
+    @Expose
+    private String date;
     @SerializedName("isfamily")
     @Expose
     private Integer isfamily;
@@ -137,5 +140,13 @@ public final class Photo implements Serializable {
 
     public void setOwnername(String ownername) {
         this.ownername = ownername;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

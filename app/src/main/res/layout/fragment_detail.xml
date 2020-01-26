@@ -18,13 +18,14 @@
     <ImageView
         android:id="@+id/ivTitle"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tbMain"
+        app:layout_constraintBottom_toBottomOf="@id/tvDate"
         app:layout_constraintWidth_percent="0.4" />
 
     <TextView
@@ -43,13 +44,13 @@
         style="@style/TextView.Detail.Text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/ingredients"
+        android:text="@string/author"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tvTitle"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
     <TextView
-        android:id="@+id/tvDescription"
+        android:id="@+id/tvAuthor"
         style="@style/TextView.Detail.Description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -62,19 +63,30 @@
         style="@style/TextView.Detail.Text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/web_reference"
+        android:text="@string/date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivTitle"
-        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+        app:layout_constraintTop_toBottomOf="@id/tvAuthor" />
 
     <TextView
-        android:id="@+id/tvUrl"
+        android:id="@+id/tvDate"
         style="@style/TextView.Detail.Description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tvTitle"
         app:layout_constraintTop_toBottomOf="@id/tvLabelDetail" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/TextView.Detail.Description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacing_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate" />
 
 
 </android.support.constraint.ConstraintLayout>
