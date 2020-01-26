@@ -28,9 +28,6 @@ class MainViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.tvDescription)
     TextView tvDescription;
 
-    @BindView(R.id.tvUrl)
-    TextView tvUrl;
-
     @Inject
     public MainViewHolder(View itemView) {
         super(itemView);
@@ -42,7 +39,6 @@ class MainViewHolder extends RecyclerView.ViewHolder {
         Picasso.get().load(photo.getThumbnail()).into(ivTitle);
         tvTitle.setText(photo.getTitle());
         tvDescription.setText(photo.getOwnername());
-//        tvUrl.setText(photo.getHref());
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

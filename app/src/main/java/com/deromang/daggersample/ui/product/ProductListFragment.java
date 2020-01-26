@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.deromang.daggersample.R;
@@ -35,6 +36,9 @@ public class ProductListFragment extends BaseFragment implements ProductListView
 
     @BindView(R.id.rvMain)
     RecyclerView rvMain;
+
+    @BindView(R.id.ivEmpty)
+    ImageView ivEmpty;
 
     @BindView(R.id.tvEmpty)
     TextView tvEmpty;
@@ -102,7 +106,7 @@ public class ProductListFragment extends BaseFragment implements ProductListView
         super.onResume();
         showToolbar();
         if (!photoList.isEmpty()) {
-            tvEmpty.setVisibility(View.GONE);
+            hideText();
         }
     }
 
@@ -120,9 +124,11 @@ public class ProductListFragment extends BaseFragment implements ProductListView
 
     private void hideText() {
         tvEmpty.setVisibility(View.GONE);
+        ivEmpty.setVisibility(View.GONE);
     }
 
     private void showText() {
         tvEmpty.setVisibility(View.VISIBLE);
+        ivEmpty.setVisibility(View.VISIBLE);
     }
 }

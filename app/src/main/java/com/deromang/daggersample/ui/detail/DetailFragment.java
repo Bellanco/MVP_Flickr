@@ -1,7 +1,11 @@
 package com.deromang.daggersample.ui.detail;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -84,17 +88,8 @@ public class DetailFragment extends BaseFragment implements DetailView {
         Picasso.get().load(photo.getThumbnail()).into(ivTitle);
         tvTitle.setText(photo.getTitle());
         tvDescription.setText(photo.getTitle());
-//        SpannableString content = new SpannableString(photo.getHref());
-//        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-//        tvUrl.setText(content);
     }
 
-    @OnClick(R.id.tvUrl)
-    public void onClickUrl() {
-//        final Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(photo.getHref()));
-//        getActivity().startActivity(intent);
-
-    }
 
     @Override
     public void onResume() {
