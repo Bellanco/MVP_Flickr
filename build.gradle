@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+ext {
+
+    versions = [
+            vAndroid    : "25.3.1",
+            vDagger     : "2.10",
+            vButterknife: "8.8.1",
+            vRetrofit   : "2.3.0",
+
+    ]
+
+    libraries = [
+
+            appCompat          : "com.android.support:appcompat-v7:${versions.vAndroid}",
+            design             : "com.android.support:design:${versions.vAndroid}",
+            cardView           : "com.android.support:cardview-v7:${versions.vAndroid}",
+
+            butterknife        : "com.jakewharton:butterknife:${versions.vButterknife}",
+            butterknifeCompiler: "com.jakewharton:butterknife-compiler:${versions.vButterknife}",
+            retrofit           : "com.squareup.retrofit2:retrofit:${versions.vRetrofit}",
+
+            //Gradle: Injection Dependencies
+            daggerApt          : "com.google.dagger:dagger-compiler:${versions.vDagger}",
+            daggerCompile      : "com.google.dagger:dagger:${versions.vDagger}",
+            daggerProvided     : 'org.glassfish:javax.annotation:10.0-b28',
+    ]
+
+    testing = [
+
+            jUnit   : 'junit:junit:4.12',
+            espresso: "com.android.support.test.espresso:espresso-core:2.2.2"
+
+    ]
+
+}

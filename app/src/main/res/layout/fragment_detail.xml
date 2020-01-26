@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="3"
+    android:background="@color/light_grey"
+    android:orientation="vertical"
+    tools:context=".ui.detail.DetailFragment">
+
+
+    <include
+        android:id="@+id/tbMain"
+        layout="@layout/toolbar_detail" />
+
+
+    <ImageView
+        android:id="@+id/ivTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbMain"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextView.Detail.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginRight="@dimen/spacing_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivTitle"
+        app:layout_constraintTop_toTopOf="@id/ivTitle" />
+
+    <TextView
+        android:id="@+id/tvLabelDescription"
+        style="@style/TextView.Detail.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ingredients"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/TextView.Detail.Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDescription" />
+
+    <TextView
+        android:id="@+id/tvLabelDetail"
+        style="@style/TextView.Detail.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/web_reference"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+    <TextView
+        android:id="@+id/tvUrl"
+        style="@style/TextView.Detail.Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDetail" />
+
+
+</android.support.constraint.ConstraintLayout>

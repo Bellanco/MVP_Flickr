@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Flickr</string>
+    <string name="filter">Filter</string>
+    <string name="ingredients">Detail</string>
+    <string name="web_reference">Description</string>
+    <string name="no_data_available">No results found</string>
+</resources>
