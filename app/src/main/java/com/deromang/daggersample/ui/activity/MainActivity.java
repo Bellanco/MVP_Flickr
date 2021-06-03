@@ -95,7 +95,4 @@ public class MainActivity extends BaseActivity implements MainView {
         tbMain.setVisibility(View.GONE);
     }
 
-    public void clearResults() {
-        etFilter.setText("");
-    }
 }

@@ -57,12 +57,6 @@ public abstract class BaseFragment extends Fragment implements BaseView {
         }
     }
 
-    public void clearResults() {
-        if (getActivity() instanceof MainActivity) {
-            ((MainActivity) getActivity()).clearResults();
-        }
-    }
-
     public void hideToolbar() {
         if (getActivity() instanceof MainActivity) {
             ((MainActivity) getActivity()).hideToolbar();
