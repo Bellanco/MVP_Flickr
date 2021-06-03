@@ -5,4 +5,5 @@
     <string name="date">Fecha</string>
     <string name="no_data_available">No se han encontrado resultados</string>
     <string name="error">Se ha producido un error</string>
+    <string name="description">Descripción</string>
 </resources>

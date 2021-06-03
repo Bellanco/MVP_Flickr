@@ -2,6 +2,7 @@ package com.deromang.daggersample.ui.detail;
 
 
 import android.support.v4.app.Fragment;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +42,9 @@ public class DetailFragment extends BaseFragment implements DetailView {
 
     @BindView(R.id.tvTitle)
     TextView tvTitle;
+
+    @BindView(R.id.tvTitleDescription)
+    TextView tvTitleDescription;
 
     @BindView(R.id.tvDescription)
     TextView tvDescription;
@@ -103,6 +107,9 @@ public class DetailFragment extends BaseFragment implements DetailView {
         tvAuthor.setText(photo.getOwner().getUsername());
         tvDate.setText(DateUtils.getDate(photo.getDates().getTaken()));
         tvDescription.setText(photo.getDescription().getContent());
+        if (photo.getDescription().getContent().isEmpty()) {
+            tvTitleDescription.setVisibility(View.GONE);
+        }
     }
 
 

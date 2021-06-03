@@ -107,6 +107,17 @@
                 tools:text="@string/no_data_available" />
 
             <TextView
+                android:id="@+id/tvTitleDescription"
+                style="@style/TextView.Detail.Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="@string/description"
+                app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+            <TextView
                 android:id="@+id/tvDescription"
                 style="@style/TextView.Detail.Description"
                 android:layout_width="0dp"
@@ -115,7 +126,7 @@
                 android:singleLine="false"
                 app:layout_constraintEnd_toEndOf="@id/tvTitle"
                 app:layout_constraintStart_toStartOf="@id/tvTitle"
-                app:layout_constraintTop_toBottomOf="@id/tvDate"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleDescription"
                 tools:text="@string/no_data_available" />
 
         </android.support.constraint.ConstraintLayout>
