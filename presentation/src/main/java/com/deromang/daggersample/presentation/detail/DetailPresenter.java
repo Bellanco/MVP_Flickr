@@ -14,4 +14,10 @@ public interface DetailPresenter {
 
     void setView(DetailView view);
 
+    void requestData();
+
+    void getDetailImage(String idPhoto, String secretNumber);
+
+    void getUrlImage(String idPhoto);
+
 }

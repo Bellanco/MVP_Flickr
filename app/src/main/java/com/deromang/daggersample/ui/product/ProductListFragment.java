@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.deromang.daggersample.R;
@@ -46,7 +45,6 @@ public class ProductListFragment extends BaseFragment implements ProductListView
 
 
     public ProductListFragment() {
-        // Required empty public constructor
     }
 
     public static Fragment newInstance() {
@@ -93,17 +91,10 @@ public class ProductListFragment extends BaseFragment implements ProductListView
         presenter.onTextChanged(value);
     }
 
-    public void onClickCross() {
-        showText();
-    }
-
     @Override
     public void onResume() {
         super.onResume();
         showToolbar();
-        if (!photoList.isEmpty()) {
-            hideText();
-        }
     }
 
     @Override
@@ -112,17 +103,10 @@ public class ProductListFragment extends BaseFragment implements ProductListView
         adapter.addAll(photoList);
         adapter.notifyDataSetChanged();
         if (photoList.size() > 0) {
-            hideText();
+            tvEmpty.setVisibility(View.GONE);
         } else {
-            showText();
+            tvEmpty.setVisibility(View.VISIBLE);
         }
     }
 
-    private void hideText() {
-        tvEmpty.setVisibility(View.GONE);
-    }
-
-    private void showText() {
-        tvEmpty.setVisibility(View.VISIBLE);
-    }
 }

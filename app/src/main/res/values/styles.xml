@@ -13,11 +13,10 @@
         <item name="android:gravity">start</item>
         <item name="android:textColor">@color/dark</item>
         <item name="android:singleLine">true</item>
-        <item name="android:maxLines">1</item>
     </style>
 
     <style name="TextView.Detail">
-        <item name="android:maxLines">2</item>
+        <item name="android:singleLine">false</item>
         <item name="android:paddingTop">5dp</item>
     </style>
 

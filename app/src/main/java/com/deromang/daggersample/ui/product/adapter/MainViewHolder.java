@@ -17,8 +17,6 @@ import butterknife.ButterKnife;
 
 class MainViewHolder extends RecyclerView.ViewHolder {
 
-    private View view;
-
     @BindView(R.id.ivTitle)
     ImageView ivTitle;
 
@@ -31,7 +29,6 @@ class MainViewHolder extends RecyclerView.ViewHolder {
     @Inject
     public MainViewHolder(View itemView) {
         super(itemView);
-        this.view = itemView;
         ButterKnife.bind(this, itemView);
     }
 
