@@ -79,9 +79,6 @@ public class MainActivity extends BaseActivity implements MainView {
     @OnClick(R.id.ivClose)
     void onClickCross() {
         etFilter.setText("");
-        Fragment mFragment = getSupportFragmentManager().findFragmentById(R.id.container);
-        if (mFragment instanceof ProductListFragment)
-            ((ProductListFragment) mFragment).onClickCross();
     }
 
     @Override

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Flickr</string>
-    <string name="filter">Filter</string>
-    <string name="author">Author</string>
-    <string name="date">Date</string>
-    <string name="no_data_available">No results found</string>
+    <string name="filter">Filtrar por...</string>
+    <string name="author">Autor</string>
+    <string name="date">Fecha</string>
+    <string name="no_data_available">No se han encontrado resultados</string>
 </resources>

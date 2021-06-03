@@ -37,9 +37,6 @@ public class ProductListFragment extends BaseFragment implements ProductListView
     @BindView(R.id.rvMain)
     RecyclerView rvMain;
 
-    @BindView(R.id.ivEmpty)
-    ImageView ivEmpty;
-
     @BindView(R.id.tvEmpty)
     TextView tvEmpty;
 
@@ -123,11 +120,9 @@ public class ProductListFragment extends BaseFragment implements ProductListView
 
     private void hideText() {
         tvEmpty.setVisibility(View.GONE);
-        ivEmpty.setVisibility(View.GONE);
     }
 
     private void showText() {
         tvEmpty.setVisibility(View.VISIBLE);
-        ivEmpty.setVisibility(View.VISIBLE);
     }
 }

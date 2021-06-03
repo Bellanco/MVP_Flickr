@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/spacing_small"
+    android:layout_margin="@dimen/spacing_tiny"
     android:background="@color/white"
     android:orientation="horizontal"
     tools:context=".ui.product.adapter.MainAdapter">
@@ -34,14 +34,14 @@
             style="@style/TextView.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_normal" />
+            android:layout_marginBottom="@dimen/spacing_small" />
 
         <TextView
             android:id="@+id/tvDescription"
             style="@style/TextView.Description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_normal" />
+            android:layout_marginTop="@dimen/spacing_small" />
 
     </LinearLayout>
 
