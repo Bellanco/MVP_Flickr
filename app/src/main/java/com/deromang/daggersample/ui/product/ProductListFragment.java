@@ -56,7 +56,6 @@ public class ProductListFragment extends BaseFragment implements ProductListView
         return new ProductListFragment();
     }
 
-
     @Override
     protected int getLayoutResId() {
         return R.layout.fragment_main;
