@@ -14,6 +14,7 @@ import com.deromang.daggersample.domain.data.detail.PhotoModel;
 import com.deromang.daggersample.domain.data.url.Size;
 import com.deromang.daggersample.presentation.detail.DetailPresenter;
 import com.deromang.daggersample.presentation.detail.DetailView;
+import com.deromang.daggersample.tools.DateUtils;
 import com.deromang.daggersample.ui.BaseFragment;
 import com.squareup.picasso.Picasso;
 
@@ -98,12 +99,10 @@ public class DetailFragment extends BaseFragment implements DetailView {
     }
 
     private void setupView(PhotoModel photo) {
-//        Picasso.get().load(this.photo.getThumbnail()).placeholder(R.drawable.img_default).fit().centerCrop().into(ivTitle);
         tvTitle.setText(photo.getTitle().getContent());
         tvAuthor.setText(photo.getOwner().getUsername());
-        tvDate.setText(photo.getDates().getLastupdate());
-        if (photo.getDescription().getContent() != null)
-            tvDescription.setText(photo.getDescription().getContent());
+        tvDate.setText(DateUtils.getDate(photo.getDates().getTaken()));
+        tvDescription.setText(photo.getDescription().getContent());
     }
 
 
