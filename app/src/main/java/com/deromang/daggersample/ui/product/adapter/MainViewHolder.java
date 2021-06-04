@@ -36,12 +36,7 @@ class MainViewHolder extends RecyclerView.ViewHolder {
         Picasso.get().load(photo.getThumbnail()).placeholder(R.drawable.img_default).fit().centerCrop().into(ivTitle);
         tvTitle.setText(photo.getTitle());
         tvDescription.setText(photo.getOwnername());
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listener.onItemClick(photo);
-            }
-        });
+        itemView.setOnClickListener(view -> listener.onItemClick(photo));
     }
 
 }

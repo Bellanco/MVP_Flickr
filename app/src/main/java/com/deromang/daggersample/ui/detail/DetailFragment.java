@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.deromang.daggersample.R;
 import com.deromang.daggersample.deromang.modules.presentation.main.DetailComponent;
@@ -16,6 +15,8 @@ import com.deromang.daggersample.domain.data.url.Size;
 import com.deromang.daggersample.presentation.detail.DetailPresenter;
 import com.deromang.daggersample.presentation.detail.DetailView;
 import com.deromang.daggersample.tools.DateUtils;
+import com.deromang.daggersample.tools.Utils;
+import com.deromang.daggersample.ui.BaseDialog;
 import com.deromang.daggersample.ui.BaseFragment;
 import com.squareup.picasso.Picasso;
 
@@ -126,17 +127,24 @@ public class DetailFragment extends BaseFragment implements DetailView {
 
     @Override
     public void showError(String message) {
-        Toast.makeText(getContext(), getString(R.string.error), Toast.LENGTH_LONG).show();
+        Utils.showDialog(getContext(), BaseDialog.DIALOG_TYPE_WRONG,
+                getString(R.string.error), message,
+                getString(R.string.ok), getString(R.string.label_retry),
+                new Utils.onDialogListener() {
+                    @Override
+                    public void onClickPositive() {
+                    }
+
+                    @Override
+                    public void onClickNegative() {
+                        onClickBack();
+                    }
+                });
     }
 
     @Override
     public void showImages(List<Size> images) {
-        Collections.sort(images, new Comparator() {
-            @Override
-            public int compare(Object o1, Object o2) {
-                return ((Size) o2).getWidth().compareTo(((Size) o1).getWidth());
-            }
-        });
+        Collections.sort(images, (Comparator) (o1, o2) -> ((Size) o2).getWidth().compareTo(((Size) o1).getWidth()));
         Picasso.get().load(images.get(0).getSource()).placeholder(R.drawable.img_default).into(ivTitle);
     }
 }

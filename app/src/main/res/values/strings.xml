@@ -6,4 +6,6 @@
     <string name="no_data_available">No se han encontrado resultados</string>
     <string name="error">Se ha producido un error</string>
     <string name="description">Descripción</string>
+    <string name="ok">Ok</string>
+    <string name="label_retry">Atrás</string>
 </resources>
