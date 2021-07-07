@@ -38,7 +38,7 @@
         android:id="@+id/btnPositive"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_normal"
         android:background="@color/colorPrimary"
         android:padding="@dimen/spacing_small"
         android:textColor="@color/white"

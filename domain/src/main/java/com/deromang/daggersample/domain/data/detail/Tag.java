@@ -1,7 +1,6 @@
 
 package com.deromang.daggersample.domain.data.detail;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -24,7 +23,7 @@ public class Tag {
     private String content;
     @SerializedName("machine_tag")
     @Expose
-    private Boolean machineTag;
+    private int machineTag;
 
     public String getId() {
         return id;
@@ -66,11 +65,11 @@ public class Tag {
         this.content = content;
     }
 
-    public Boolean getMachineTag() {
+    public int getMachineTag() {
         return machineTag;
     }
 
-    public void setMachineTag(Boolean machineTag) {
+    public void setMachineTag(int machineTag) {
         this.machineTag = machineTag;
     }
 
